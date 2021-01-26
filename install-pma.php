@@ -7,10 +7,10 @@ if(getenv('USER') !== 'root') {
 
 system('apt-get install -y nginx php7.4-fpm php7.4-mysql php7.4-curl php7.4-mbstring');
 system('rm -rf /opt/pma.zip /opt/pma');
-system('wget https://files.phpmyadmin.net/phpMyAdmin/5.0.2/phpMyAdmin-5.0.2-all-languages.zip -O /opt/pma.zip');
+system('wget https://files.phpmyadmin.net/phpMyAdmin/5.0.4/phpMyAdmin-5.0.4-all-languages.zip -O /opt/pma.zip');
 chdir('/opt');
 system('unzip -o pma.zip');
-system('mv phpMyAdmin-5.0.2-all-languages pma');
+system('mv phpMyAdmin-5.0.4-all-languages pma');
 chdir('pma');
 system('cp config.sample.inc.php config.inc.php');
 mkdir('tmp');
